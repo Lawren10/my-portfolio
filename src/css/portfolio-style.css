@@ -1,0 +1,781 @@
+#portfolio {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+#portfolio #name-info {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: .2rem 0 .5rem #daf5fa2c;
+  z-index: 5;
+  overflow: hidden;
+  animation: name-intro 3s forwards ease-in-out 15s;
+}
+
+#portfolio #name-info #intro {
+  width: 60%;
+  text-align: start;
+  animation: intro 2s forwards ease-in-out 16s;
+}
+
+#portfolio #name-info #intro p {
+  font-size: 1.3rem;
+  opacity: 0;
+  animation: intro-p 2s forwards ease-in-out 2s, opacity-off 2s forwards ease-in-out 14s;
+}
+
+#portfolio #name-info #intro h1 {
+  font-size: 2rem;
+  opacity: 0;
+  animation: intro-h1 2s forwards ease-in-out 3s, opacity-off 2s forwards ease-in-out 14s;
+}
+
+#portfolio #name-info #title {
+  width: 82%;
+  opacity: 0;
+  animation: title-div 2s forwards ease-in-out 5s, title-div-sec 2s forwards ease-in-out 16s;
+  position: relative;
+}
+
+#portfolio #name-info #title h1 {
+  width: 100%;
+  height: 5rem;
+  font-size: 3.5rem;
+  color: #c8fff7;
+  padding-left: 2rem;
+  position: relative;
+  animation: title-h1-sec 2s forwards ease-in-out 16s;
+}
+
+#portfolio #name-info #title h1 #frontend {
+  position: absolute;
+  left: 11%;
+  animation: scale 2s forwards ease-in-out 16s, frontend 2s forwards ease-in-out 16s;
+}
+
+#portfolio #name-info #title h1 #developer {
+  position: absolute;
+  left: 39%;
+  animation: scale 2s forwards ease-in-out 16s, developer 2s forwards ease-in-out 16s;
+}
+
+#portfolio #name-info #title h1 #designer {
+  position: absolute;
+  left: 68%;
+  animation: scale 2s forwards ease-in-out 16s, designer 2s forwards ease-in-out 16s;
+}
+
+#portfolio #name-info #title h1 #logo {
+  position: absolute;
+  font-size: 1.2rem;
+  font-weight: 800;
+  font-style: italic;
+  font-family: 'roboto';
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  padding-top: 1.5rem;
+  box-shadow: inset 0 1px 1rem 0.1rem rgba(245, 245, 245, 0.11), inset 0 -1px 1rem 0.1rem rgba(245, 245, 245, 0.11);
+  color: #EDFAFD;
+  line-height: 1.2rem;
+  transform: rotateY(180deg);
+  perspective: 600px;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  animation: title-span 2s forwards ease-in-out 8s, title-span-sec 2s forwards ease-in-out 16s;
+}
+
+#portfolio #name-info #title p {
+  text-align: end;
+  margin-right: 1rem;
+  opacity: 0;
+  animation: title-p 2s forwards ease-in-out 11s, title-p-sec 2s forwards ease-in-out 16s;
+}
+
+#portfolio #action {
+  position: absolute;
+  top: 70%;
+  height: 35%;
+  width: 100%;
+  opacity: 0;
+  animation: action 2s forwards ease-in-out, opacity-on 2s forwards ease-in-out 20s;
+}
+
+#portfolio #action h2 {
+  font-family: "roboto" sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  font-style: italic;
+  text-align: center;
+  margin-top: 6rem;
+}
+
+#portfolio #action footer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+#portfolio #action footer::before {
+  position: absolute;
+  content: '';
+  top: 60%;
+  left: -9%;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  box-shadow: inset 0 1px 1rem 0.1rem rgba(245, 245, 245, 0.11), inset 0 -1px 1rem 0.1rem rgba(245, 245, 245, 0.11);
+  z-index: -1;
+}
+
+#portfolio #action #icons {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .8rem;
+  padding-top: 2rem;
+  margin-top: 9rem;
+  color: #90E0EF;
+}
+
+#portfolio #action #icons i {
+  display: grid;
+  place-content: center;
+  font-size: 1.5rem;
+  padding: .5rem;
+  border-radius: .5rem;
+  box-shadow: inset 0 1px 0.5rem 0.1rem rgba(245, 245, 245, 0.11), inset 0 -1px 0.5rem 0.1rem rgba(245, 245, 245, 0.11);
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+#portfolio #action #icons i:hover {
+  transform: scale(1.1);
+  color: #90E0EF;
+  transition: all .5s ease;
+}
+
+#portfolio #general {
+  width: 75%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 25%;
+  opacity: 0;
+  animation: opacity-on 2s forwards ease-in-out 20s;
+  overflow: hidden;
+}
+
+.slidein {
+  animation: slidein 2s forwards ease;
+}
+
+nav {
+  position: absolute;
+  top: 5%;
+  left: 18%;
+  display: flex;
+  gap: 1rem;
+  opacity: 0;
+  animation: opacity-on 2s forwards ease-in-out 20s;
+}
+
+nav button {
+  font-family: "poppins";
+  font-weight: 400;
+  padding: .5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 1rem;
+  background-color: #000;
+  color: #EDFAFD;
+  box-shadow: inset 0 1px 1rem 0.1rem rgba(245, 245, 245, 0.11), inset 0 -1px 1rem 0.1rem rgba(245, 245, 245, 0.11);
+  transition: all .3s ease;
+}
+
+nav button:hover {
+  box-shadow: inset 0 1px 1rem 0.1rem #42fdfd2a, inset 0 -1px 1rem 0.1rem #42fdfd2a;
+  transform: scale(1.1);
+  transition: all .3s ease;
+}
+
+#project {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+  position: relative;
+}
+
+#project #head {
+  text-align: center;
+  font-family: "poppins";
+  font-weight: 400;
+  font-size: 2rem;
+  color: #90E0EF;
+  margin-top: 4rem;
+}
+
+#project #project-list {
+  width: 90%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#project .project-item {
+  border: 1px solid #121212;
+  border-radius: 1rem;
+  height: 80%;
+  width: 25%;
+  position: relative;
+  box-shadow: inset 0 1px 0.5rem 0.2rem rgba(245, 245, 245, 0.11), inset 0 -1px 0.5rem 0.2rem rgba(245, 245, 245, 0.11);
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform .5s ease;
+}
+
+#project .project-item:hover {
+  transform: translateY(-1.05rem) scale(1.05);
+  transition: all .5s ease;
+}
+
+#project .project-item:hover button {
+  opacity: 1;
+  transition: all .5s ease;
+}
+
+#project .project-item button {
+  position: absolute;
+  bottom: 45%;
+  left: 35%;
+  font-family: "poppins";
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #90E0EF;
+  background-color: #121212bd;
+  border: none;
+  border-radius: .5rem;
+  padding: .5rem;
+  box-shadow: inset 0 1px 0.5rem 0.2rem rgba(245, 245, 245, 0.11), inset 0 -1px 0.5rem 0.2rem rgba(245, 245, 245, 0.11);
+  cursor: pointer;
+  opacity: 0;
+}
+
+#project .item1 {
+  background: url(../assest/spree-shop.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#project .item2 {
+  background: url(../assest/wellness-medicare.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#project .item3 {
+  background: url(../assest/bakery-shop.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#project .item4 {
+  background: url(../assest/flip-game.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#spree-shop, #medicare, #bakery-shop, #flip {
+  position: absolute;
+  width: 95%;
+  height: 100%;
+  background-color: #000;
+  z-index: 2;
+  overflow-y: scroll;
+}
+
+#spree-shop::-webkit-scrollbar, #medicare::-webkit-scrollbar, #bakery-shop::-webkit-scrollbar, #flip::-webkit-scrollbar {
+  width: .3rem;
+}
+
+#spree-shop::-webkit-scrollbar-track, #medicare::-webkit-scrollbar-track, #bakery-shop::-webkit-scrollbar-track, #flip::-webkit-scrollbar-track {
+  border-radius: .3rem;
+  box-shadow: inset 0 1px 1rem 0.2rem rgba(245, 245, 245, 0.11), inset 0 -1px 1rem 0.2rem rgba(245, 245, 245, 0.11);
+}
+
+#spree-shop::-webkit-scrollbar-thumb, #medicare::-webkit-scrollbar-thumb, #bakery-shop::-webkit-scrollbar-thumb, #flip::-webkit-scrollbar-thumb {
+  border-radius: .3rem;
+  background-color: #90E0EF;
+}
+
+#spree-shop #close, #medicare #close, #bakery-shop #close, #flip #close {
+  position: absolute;
+  color: #EDFAFD;
+  top: 2%;
+  right: 2%;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  border-radius: 50%;
+  padding: .5rem;
+  background-color: transparent;
+  box-shadow: inset 0 1px 1rem 0.2rem rgba(245, 245, 245, 0.11), inset 0 -1px 1rem 0.2rem rgba(245, 245, 245, 0.11);
+  cursor: pointer;
+  transition: transform .5s ease;
+}
+
+#spree-shop #close:hover, #medicare #close:hover, #bakery-shop #close:hover, #flip #close:hover {
+  transform: scale(1.1);
+  transition: all .5s ease;
+}
+
+#spree-shop #thumbnail, #medicare #thumbnail, #bakery-shop #thumbnail, #flip #thumbnail {
+  width: 5rem;
+  height: 5rem;
+  border-radius: .5rem;
+  background: url(../assest/spree-thumbnail.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  box-shadow: inset 0 1px 0.5rem 0.2rem rgba(245, 245, 245, 0.11), inset 0 -1px 0.5rem 0.2rem rgba(245, 245, 245, 0.11);
+}
+
+#spree-shop #shop-title, #medicare #shop-title, #bakery-shop #shop-title, #flip #shop-title {
+  display: flex;
+  place-items: center;
+  gap: 1rem;
+  margin: 2rem 0 0 2rem;
+}
+
+#spree-shop #shop-title h1, #medicare #shop-title h1, #bakery-shop #shop-title h1, #flip #shop-title h1 {
+  color: #90E0EF;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+#spree-shop #shop-title p, #medicare #shop-title p, #bakery-shop #shop-title p, #flip #shop-title p {
+  font-size: .9rem;
+  font-weight: 300;
+}
+
+#spree-shop #desc, #medicare #desc, #bakery-shop #desc, #flip #desc {
+  margin: 1rem 0 0 2rem;
+}
+
+#spree-shop #desc h2, #medicare #desc h2, #bakery-shop #desc h2, #flip #desc h2 {
+  color: #90E0EF;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+#spree-shop #desc i, #medicare #desc i, #bakery-shop #desc i, #flip #desc i {
+  margin-right: 1rem;
+  border-radius: .5rem;
+  padding: .5rem;
+  box-shadow: inset 0 1px 0.5rem 0.2rem rgba(245, 245, 245, 0.11), inset 0 -1px 0.5rem 0.2rem rgba(245, 245, 245, 0.11);
+  cursor: pointer;
+}
+
+#spree-shop #image, #medicare #image, #bakery-shop #image, #flip #image {
+  width: 80%;
+  height: 30rem;
+  margin: 2rem auto 0 auto;
+  border-radius: 1rem;
+  background: url(../assest/spree-view.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  box-shadow: inset 0 1px 1rem 0.2rem rgba(245, 245, 245, 0.11), inset 0 -1px 1rem 0.2rem rgba(245, 245, 245, 0.11);
+}
+
+#spree-shop article, #medicare article, #bakery-shop article, #flip article {
+  margin: 1rem 0 0 2rem;
+  font-size: .9rem;
+  font-weight: 300;
+}
+
+#spree-shop article button, #medicare article button, #bakery-shop article button, #flip article button {
+  font-size: 1.1rem;
+  color: #EDFAFD;
+  width: 8rem;
+  border: none;
+  border-radius: .5rem;
+  padding: .8rem;
+  margin: 1rem 0 1rem 0;
+  background-color: transparent;
+  box-shadow: inset 0 1px 0.5rem 0.2rem rgba(245, 245, 245, 0.11), inset 0 -1px 0.5rem 0.2rem rgba(245, 245, 245, 0.11);
+  cursor: pointer;
+  transition: transform .5s ease;
+}
+
+#spree-shop article button:hover, #medicare article button:hover, #bakery-shop article button:hover, #flip article button:hover {
+  transform: scale(1.1);
+  transition: all .5s ease;
+}
+
+#medicare #medicare-title {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0 0 2rem;
+}
+
+#medicare #medicare-title h1 {
+  color: #90E0EF;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+#medicare #medicare-title p {
+  font-size: .9rem;
+  font-weight: 300;
+}
+
+#medicare #thumbnail {
+  background: url(../assest/medicare-thumbnail.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#medicare #image {
+  background: url(../assest/medicare-view.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+#bakery-shop #bakery-title {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0 0 2rem;
+}
+
+#bakery-shop #bakery-title h1 {
+  color: #90E0EF;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+#bakery-shop #bakery-title p {
+  font-size: .9rem;
+  font-weight: 300;
+}
+
+#bakery-shop #thumbnail {
+  background: url(../assest/bakery-thumbnail.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#bakery-shop #image {
+  background: url(../assest/bakery-view.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+#flip #flip-title {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0 0 2rem;
+}
+
+#flip #flip-title h1 {
+  color: #90E0EF;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+#flip #flip-title p {
+  font-size: .9rem;
+  font-weight: 300;
+}
+
+#flip #thumbnail {
+  background: url(../assest/flip-thumbnail.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#flip #image {
+  background: url(../assest/flip-veiw.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.slideup {
+  animation: slideup 2s forwards ease;
+}
+
+.slidedown {
+  animation: slidedown 2s forwards ease;
+}
+
+#about {
+  width: 100%;
+  height: 100%;
+}
+
+#about h1 {
+  text-align: center;
+  font-family: "poppins";
+  font-weight: 400;
+  font-size: 2rem;
+  color: #90E0EF;
+  margin-top: 4rem;
+}
+
+#about article {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+#about article p {
+  width: 65%;
+  font-family: 'roboto';
+  font-weight: 300;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+}
+
+#about article h2 {
+  margin-top: 2rem;
+  color: #90E0EF;
+  font-family: "roboto" sans-serif;
+  font-weight: 400;
+}
+
+#about article #skill-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+#about article #skill-icons i {
+  display: grid;
+  place-content: center;
+  font-size: 1.5rem;
+  padding: .5rem;
+  border-radius: .5rem;
+  box-shadow: inset 0 1px 0.5rem 0.1rem rgba(245, 245, 245, 0.11), inset 0 -1px 0.5rem 0.1rem rgba(245, 245, 245, 0.11);
+  cursor: pointer;
+}
+
+#about article h3 {
+  font-family: 'roboto';
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin: 1rem 0 0 0;
+}
+
+#about article #contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+#about article #contact-icon i {
+  display: grid;
+  place-content: center;
+  font-size: 1.6rem;
+  color: #90E0EF;
+  padding: .5rem;
+  border-radius: .5rem;
+  box-shadow: inset 0 1px 0.5rem 0.1rem rgba(245, 245, 245, 0.11), inset 0 -1px 0.5rem 0.1rem rgba(245, 245, 245, 0.11);
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+#about article #contact-icon i:hover {
+  transform: scale(1.1);
+  transition: all .5s ease;
+}
+
+#cv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#cv h1 {
+  font-family: "poppins";
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #90E0EF;
+  margin-top: 1rem;
+}
+
+#cv #cv-wrapper {
+  width: 90%;
+  height: 95%;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: inset 0 1px 1rem 0.2rem rgba(245, 245, 245, 0.11), inset 0 -1px 1rem 0.2rem rgba(245, 245, 245, 0.11);
+  overflow-y: scroll;
+}
+
+#cv #cv-wrapper article {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(to bottom, #3638382a, #3638382a), url(../assest/texture.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  color: #000;
+  padding-left: 4rem;
+}
+
+#cv #cv-wrapper article h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+#cv #cv-wrapper article p {
+  font-family: 'roboto';
+}
+
+#cv #cv-wrapper article #name-title h1 {
+  font-size: 2rem;
+  color: #000;
+  font-family: "poppins";
+  font-weight: 600;
+  padding-top: 3rem;
+}
+
+#cv #cv-wrapper article #name-title span {
+  font-style: italic;
+}
+
+#cv #cv-wrapper article #profile {
+  margin-top: 2rem;
+}
+
+#cv #cv-wrapper article #profile p {
+  width: 70%;
+  line-height: 1.5rem;
+}
+
+#cv #cv-wrapper article #skill-set {
+  margin-top: 2rem;
+}
+
+#cv #cv-wrapper article #skill-set #htools {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+#cv #cv-wrapper article #skill-set #tech-skill, #cv #cv-wrapper article #skill-set #design-skill {
+  display: flex;
+  gap: 1rem;
+  margin: .5rem 0 1rem 0;
+}
+
+#cv #cv-wrapper article #skill-set #tech-skill i, #cv #cv-wrapper article #skill-set #design-skill i {
+  font-size: .8rem;
+  font-weight: 600;
+  padding: .5rem;
+  border-radius: .5rem;
+  background-color: rgba(0, 0, 0, 0.336);
+  box-shadow: inset 0 1px 0.5rem 0.1rem rgba(245, 245, 245, 0.11), inset 0 -1px 0.5rem 0.1rem rgba(245, 245, 245, 0.11);
+}
+
+#cv #cv-wrapper article #cv-projects ul {
+  list-style: none;
+}
+
+#cv #cv-wrapper article #cv-projects ul li {
+  font-weight: 500;
+  margin-bottom: .5rem;
+  width: 50%;
+  cursor: pointer;
+}
+
+#cv #cv-wrapper article #cv-projects ul li:hover {
+  text-decoration: underline;
+}
+
+#cv #cv-wrapper article #work-experience {
+  margin-top: 1.95rem;
+}
+
+#cv #cv-wrapper article #education {
+  margin-top: 2rem;
+}
+
+#cv #cv-wrapper article #education #hcert {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1rem 0 .5rem 0;
+}
+
+#cv #cv-wrapper article #education #cet1,
+#cv #cv-wrapper article #education #cet2,
+#cv #cv-wrapper article #education #cet3 {
+  font-weight: 500;
+  margin-bottom: .5rem;
+}
+
+#cv #cv-wrapper article #cv-contact {
+  margin-top: 1.95rem;
+  padding-bottom: 2rem;
+}
+
+#cv #cv-wrapper article #cv-contact ul {
+  list-style: none;
+}
+
+#cv #cv-wrapper article #cv-contact ul :nth-child(1) {
+  margin-top: .5rem;
+}
+
+#cv #cv-wrapper article #cv-contact li {
+  font-weight: 500;
+  margin-bottom: .5rem;
+  cursor: pointer;
+}
+
+#cv #cv-wrapper::-webkit-scrollbar {
+  width: .3rem;
+}
+
+#cv #cv-wrapper::-webkit-scrollbar-track {
+  border-radius: .3rem;
+  box-shadow: inset 0 1px 1rem 0.2rem rgba(245, 245, 245, 0.11), inset 0 -1px 1rem 0.2rem rgba(245, 245, 245, 0.11);
+}
+
+#cv #cv-wrapper::-webkit-scrollbar-thumb {
+  border-radius: .3rem;
+  background-color: #90E0EF;
+}

@@ -1,0 +1,1558 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import './portfolio-style.scss';
+@import './animation.scss';
+
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+$body-color:#000;
+$letter-color: #EDFAFD;
+$poppins: 'poppins';
+$Roboto: 'roboto' sans-serif;
+$accent-color:#121212;
+$contrast:#90E0EF;
+$shadow: rgba(245, 245, 245, 0.11);
+$alt-shadow:#42fdfd2a;
+
+
+
+body{
+ background: $body-color;
+ font-family: $poppins;
+ color: $letter-color;
+}
+
+@mixin media($device-width){
+ @media screen and (max-width:$device-width) {
+  @content;
+ }
+}
+
+@include media(1240px){
+
+// animation styling
+@keyframes name-intro {
+ to {
+  height: 20%;
+ }
+}
+
+@keyframes frontend {
+ to {
+  // transform: translateX(4rem);
+  top: 5%;
+  left: 25%;
+ }
+}
+
+@keyframes developer {
+ to {
+  top: 5%;
+  left: 48%;
+ }
+}
+
+@keyframes designer {
+ to {
+  top: 45%;
+  left: 32%;
+ }
+}
+
+
+@keyframes title-span-sec {
+ to {
+  top: -100%;
+  left: 38%;
+  transform: scale(0.8);
+ }
+}
+
+
+
+
+// home layout stylling
+ #portfolio{
+ display: flex;
+ flex-direction: column;
+
+ #name-info{
+  #intro{
+
+   h1{
+    font-size: 1.8rem;
+   }
+  }
+ }
+
+ #title{
+  width: 100%;
+  h1{
+   margin-left: 1rem;
+   padding-left: .5rem;
+   display: flex;
+   place-items: center;
+
+   #frontend{
+    transform: translateX(-2.5rem);
+    font-size: 2.8rem;
+   }
+
+   #developer{
+    transform: translateX(-1rem);
+    font-size: 2.8rem;
+   }
+
+   #designer{
+    font-size: 2.8rem;
+   }
+
+   #logo{
+    left: -5%;
+   }
+
+  }
+
+  p{
+   margin-right: .8rem;
+  }
+ }
+
+
+
+nav {
+ flex-direction: column;
+ top: 19%;
+ left: 3%;
+ z-index: 1;
+
+ button{
+  font-size: 1rem;
+ }
+}
+
+#action{
+ top: 0;
+ right: -3%;
+ height: 10%;
+ width: 20%;
+
+ footer::before{
+  top: 130%;
+  left: 0%;
+  width: 18rem;
+  height: 18rem;
+ }
+
+ #icons{
+  flex-direction: column;
+  margin-top: 18rem;
+  gap: 2rem;
+
+  i{
+   font-size: 2rem;
+  }
+ }
+
+}
+
+
+#general {
+ width: 100%;
+ height: 80%;
+ position: absolute;
+ top: 20%;
+ left: 0;
+}
+
+}
+
+// projects stylling
+
+#project {
+ gap: 1rem;
+
+ #head {
+  margin-top: 1rem;
+  font-size: 2.8rem;
+ }
+
+ #project-list {
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  padding: 4rem 0;
+ }
+
+ .project-item {
+  width: 40%;
+  height: 50%;
+
+  &:hover {
+   transform: translateY(0) scale(1);
+   transition: none;
+  }
+
+  button {
+   font-size: 2.5rem;
+   bottom: 5%;
+   left: 38%;
+   opacity: 1;
+  }
+
+ }
+
+}
+
+
+// About stylling .
+
+#about{
+ display: grid;
+ place-content: center;
+}
+
+// spree shop stylling
+
+#spree-shop{
+width: 100%;
+}
+
+
+}
+
+
+
+
+@include media(800px){
+// animations
+
+@keyframes frontend {
+ to {
+  // transform: translateX(4rem);
+  top: 5%;
+  left: 23%;
+ }
+}
+
+@keyframes developer {
+ to {
+  // transform: translateX(4rem);
+  top: 5%;
+  left: 48%;
+ }
+}
+
+@keyframes designer {
+ to {
+  // transform: translateX(-12rem) translateY(3rem);
+  top: 45%;
+  left: 32%;
+ }
+}
+
+
+@keyframes title-span-sec {
+ to {
+  top: -90%;
+  left: 38%;
+  transform: scale(0.8);
+ }
+}
+
+
+@keyframes title-p-sec {
+ to {
+  transform: translateX(-11rem) translateY(.1rem);
+  font-size: 0.8rem;
+ }
+}
+
+// home layout stylling
+#portfolio {
+
+ #name-info {
+  #intro {
+
+   h1 {
+    font-size: 1.8rem;
+   }
+  }
+ }
+
+ #title {
+
+  h1 {
+   margin-left: 1rem;
+   padding-left: .5rem;
+
+   #frontend {
+    transform: translateX(-1.5rem);
+    font-size: 2rem;
+   }
+
+   #developer {
+    transform: translateX(-1rem);
+    font-size: 2rem;
+   }
+
+   #designer {
+    font-size: 2rem;
+   }
+
+   #logo {
+    left: -8%;
+   }
+
+  }
+
+  p {
+   margin-top: -1rem;
+  }
+ }
+
+
+ nav {
+  top: 15%;
+  
+
+  button {
+   font-size: 1rem;
+  }
+ }
+
+ #action {
+
+  footer::before {
+   width: 15rem;
+   height: 15rem;
+  }
+
+  #icons {
+   margin-top: 15rem;
+   gap: 2rem;
+  }
+
+ }
+
+}
+
+// projects stylling
+
+#project {
+
+ #head {
+  font-size: 2.5rem;
+ }
+
+ .project-item {
+  width: 40%;
+  height: 60%;
+
+  &:hover {
+   transform: translateY(0) scale(1);
+   transition: none;
+  }
+
+  button {
+   font-size: 2rem;
+   bottom: 5%;
+   left: 38%;
+   opacity: 1;
+  }
+
+ }
+
+}
+
+// cv stylling
+
+#cv {
+
+
+ #cv-wrapper {
+  overflow-x: hidden;
+
+  article {
+
+   #profile {
+    p {
+     width: 96%;
+    }
+   }
+
+   #skill-set {
+
+    #tech-skill {
+     flex-wrap: wrap;
+    }
+   }
+
+   #cv-projects {
+    ul {
+
+     li {
+      width: 90%;
+     }
+    }
+   }
+
+  }
+
+}
+
+}
+
+
+
+}
+
+
+
+@include media(600px){
+
+ @keyframes name-intro {
+  to {
+   height: 25%;
+  }
+ }
+
+ @keyframes title-span {
+  to {
+   transform: scale(.6) rotate(0deg);
+  }
+ }
+
+ @keyframes title-span-sec {
+  to {
+   top: -78%;
+   left: 38%;
+   transform: scale(0.6);
+  }
+ }
+
+ @keyframes scale {
+  to {
+   font-size: 1.2rem;
+  }
+ }
+
+ @keyframes frontend {
+  to {
+   top: 0;
+   left: 33%;
+  }
+ }
+
+ @keyframes developer {
+  to {
+   top: 0;
+   left: 48.5%;
+  }
+ }
+
+ @keyframes designer {
+  to {
+   top: 26%;
+   left: 37%;
+  }
+ }
+
+ @keyframes title-p-sec {
+  to {
+   transform: translateX(-11rem) translateY(-1.8rem);
+   font-size: 0.8rem;
+  }
+ }
+
+// home  layout stylling
+ #portfolio {
+ display: flex;
+ flex-direction: column;
+
+ #name-info {
+  #intro {
+   p{
+    font-size: 1rem;
+   }
+   h1 {
+    font-size: 1.2rem;
+   }
+  }
+ }
+
+ #title {
+  width: 100%;
+
+  h1 {
+   margin-left: 1rem;
+   padding-left: .5rem;
+   display: flex;
+   place-items: center;
+
+   #frontend {
+    transform: translateX(-2rem);
+    font-size: 1.5rem;
+   }
+
+   #developer {
+    transform: translateX(-1rem);
+    font-size: 1.5rem;
+   }
+
+   #designer {
+    font-size: 1.5rem;
+   }
+
+   #logo {
+    left: -15%;
+   }
+
+  }
+
+  p {
+   font-size: .8rem;
+  }
+ }
+
+
+ nav {
+  flex-direction: column;
+  top: 12%;
+  left: 3%;
+  z-index: 1;
+
+  button {
+   font-size: .8rem;
+  }
+  }
+
+ #action {
+  top: 0;
+  right: -3%;
+  height: 10%;
+  width: 20%;
+
+  footer::before {
+   top: 80%;
+   left: 0%;
+   width: 15rem;
+   height: 15rem;
+  }
+
+  #icons {
+   flex-direction: column;
+   margin-top: 13rem;
+   gap: 2rem;
+
+   i {
+    font-size: 1.2rem;
+   }
+  }
+
+ }
+
+
+ #general {
+  width: 100%;
+  height: 75%;
+  position: absolute;
+  top: 25%;
+  left: 0;
+ }
+
+ }
+
+// about stylling
+
+ #about{
+  display: block;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-bottom: 4rem;
+
+  article{
+   padding: 0 2rem;
+   p{
+    width: 100%;
+   }
+  }
+
+  #skill-icons{
+   width: 100%;
+   flex-wrap: wrap;
+  }
+
+ }
+
+// projects stylling
+
+ #project{
+  gap: 1rem;
+
+  #head{
+   font-size: 1.8rem;
+   margin-top: 1rem;
+  }
+
+  #project-list{
+   overflow-y: scroll;
+   width: 100%;
+   height: 100%;
+   flex-wrap: wrap;
+   padding: 4rem 0;
+  }
+
+  .project-item{
+   width: 45%;
+   height: 100%;
+   
+   &:hover {
+    transform: translateY(0) scale(1);
+    transition: none;
+   }
+
+   button{
+    bottom: 5%;
+    opacity: 1;
+   }
+
+  }
+
+ }
+
+
+ // spree shop stylling
+
+ #spree-shop{
+  width: 100%;
+
+  &::-webkit-scrollbar {
+   width: .2rem;
+  }
+
+  &::-webkit-scrollbar-track {
+   border-radius: .2rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+   border-radius: .2rem;
+  }
+  
+  #image {
+   width: 95%;
+  }
+
+ }
+
+// cv stylling
+
+#cv{
+ 
+
+ #cv-wrapper{
+   width: 100%;
+   height: 100%;
+   overflow-x: hidden;
+
+   article{
+    padding-left: 1.5rem;
+
+    #profile {
+     p {
+      width: 96%;
+     }
+    }
+    
+    #skill-set{
+
+     #tech-skill{
+      flex-wrap: wrap;
+     }
+    }
+
+    #cv-projects {
+     ul {
+
+      li {
+       width: 100%;
+      }
+     }
+    }
+
+   }
+
+  &::-webkit-scrollbar {
+   width: .1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+   border-radius: .1rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+   border-radius: .1rem;
+  }
+
+
+ }
+
+
+}
+
+
+
+
+
+
+
+
+}
+
+
+@include media(420px){
+
+@keyframes name-intro {
+ to {
+  height: 25%;
+ }
+}
+
+@keyframes title-span {
+ to {
+  transform: scale(.6) rotate(0deg);
+ }
+}
+
+@keyframes title-span-sec {
+ to {
+  top: -75%;
+  left: 39%;
+  transform: scale(0.5);
+ }
+}
+
+@keyframes scale {
+ to {
+  font-size: 1rem;
+ }
+}
+
+@keyframes frontend {
+ to {
+  top: 0;
+  left: 34%;
+ }
+}
+
+@keyframes developer {
+ to {
+  top: 0;
+  left: 47%;
+ }
+}
+
+@keyframes designer {
+ to {
+  top: 25%;
+  left: 39%;
+ }
+}
+
+@keyframes title-p-sec {
+ to {
+  transform: translateX(-12.5rem) translateY(-2rem);
+  font-size: 0.6rem;
+ }
+}
+
+// home  layout stylling
+#portfolio {
+ display: flex;
+ flex-direction: column;
+
+ 
+ #title {
+
+  h1 {
+
+   #frontend {
+    transform: translateX(-1rem);
+    font-size: 1.1rem;
+   }
+
+   #developer {
+    transform: translateX(-0.5rem);
+    font-size: 1.1rem;
+   }
+
+   #designer {
+    font-size: 1.1rem;
+   }
+
+   #logo {
+    left: -17%;
+   }
+
+  }
+
+  p {
+   font-size: .8rem;
+  }
+ }
+
+
+ nav {
+  flex-direction: column;
+  top: 18%;
+  left: 3%;
+  z-index: 1;
+
+  button {
+   font-size: .6rem;
+  }
+ }
+
+ #action {
+  top: 0;
+  right: -3%;
+  height: 10%;
+  width: 20%;
+
+  footer::before {
+   top: 85%;
+   left: 0%;
+   width: 15rem;
+   height: 15rem;
+  }
+
+  #icons {
+   flex-direction: column;
+   margin-top: 13.5rem;
+   gap: 1.5rem;
+
+   i {
+    font-size: 1.1rem;
+   }
+  }
+
+ }
+
+
+ #general {
+  width: 100%;
+  height: 75%;
+  position: absolute;
+  top: 25%;
+  left: 0;
+ }
+
+}
+
+// projects stylling
+
+#project {
+ gap: 1rem;
+
+ .project-item {
+  width: 80%;
+  height: 100%;
+
+  button {
+   font-size: 1.8rem;
+   left: 37%;
+   bottom: 5%;
+   opacity: 1;
+  }
+
+ }
+
+}
+
+// spree shop stylling
+
+#spree-shop {
+
+
+ #shop-title {
+  gap: 1rem;
+  margin: 4rem 0 0 1rem;
+
+ #thumbnail{
+  width: 4.5rem;
+  height: 4rem;
+ }
+
+  h1 {
+   color: $contrast;
+   font-size: 1.5rem;
+   font-weight: 400;
+  }
+
+  p {
+   font-size: .8rem;
+   font-weight: 300;
+   width: 95%;
+  }
+ }
+
+ #desc {
+  margin: 1rem 0 0 1rem;
+  flex-wrap: wrap;
+ }
+
+ #image {
+  width:98%;
+  height: 20rem;
+ }
+
+ article{
+  p{
+   width: 95%;
+  }
+ }
+
+}
+
+// medicare stylling 
+
+#medicare {
+
+
+ #medicare-title {
+  gap: 1rem;
+  margin: 4rem 0 0 1rem;
+
+
+  h1 {
+   color: $contrast;
+   font-size: 1.5rem;
+   font-weight: 400;
+  }
+
+  p {
+   font-size: .8rem;
+   font-weight: 300;
+   width: 95%;
+  }
+ }
+
+ #thumbnail {
+  width: 4rem;
+  height: 4rem;
+ }
+
+}
+
+
+// Bakery stylling 
+
+#bakery-shop {
+
+ #bakery-title {
+  gap: 1rem;
+  margin: 4rem 0 0 1rem;
+
+
+  h1 {
+   color: $contrast;
+   font-size: 1.5rem;
+   font-weight: 400;
+  }
+
+  p {
+   font-size: .8rem;
+   font-weight: 300;
+   width: 95%;
+  }
+ }
+
+ #thumbnail {
+  width: 4rem;
+  height: 4rem;
+ }
+
+}
+
+// flip stylling
+
+#flip {
+
+ #flip-title {
+  gap: 1rem;
+  margin: 4rem 0 0 1rem;
+
+
+  h1 {
+   color: $contrast;
+   font-size: 1.5rem;
+   font-weight: 400;
+  }
+
+  p {
+   font-size: .8rem;
+   font-weight: 300;
+   width: 95%;
+  }
+  }
+
+  #thumbnail {
+   width: 4rem;
+   height: 4rem;
+  }
+
+}
+
+}
+
+
+@include media(380px){
+ // animations
+
+ @keyframes title-span {
+  to {
+   transform: scale(.6) rotate(0deg);
+  }
+ }
+
+ // home stylling
+
+ #portfolio{
+
+  #name-info{
+   #title{
+    h1{
+     #frontend {
+      transform: translateX(-1rem);
+      font-size: 1rem;
+     }
+
+     #developer {
+      transform: translateX(-0.5rem);
+      font-size: 1rem;
+     }
+
+     #designer {
+      font-size: 1rem;
+     }
+
+     #logo {
+      left: -19%;
+     }
+    }
+   }
+  }
+
+ }
+
+// projects stylling
+
+#project {
+
+ #head{
+  font-size: 1.7rem;
+ }
+
+ .project-item {
+  width: 70%;
+  height: 110%;
+
+  button {
+   font-size: 1.5rem;
+   display: block;
+   margin: auto;
+  }
+
+ }
+
+}
+
+// spree shop stylling
+
+#spree-shop {
+
+
+ #shop-title {
+
+  #thumbnail {
+   width: 4.5rem;
+   height: 3.5rem;
+  }
+
+  h1 {
+   color: $contrast;
+   font-size: 1.2rem;
+   font-weight: 400;
+  }
+
+ }
+
+}
+
+// medicare stylling 
+
+#medicare {
+
+ #medicare-title {
+  align-items: center;
+
+  h1 {
+   color: $contrast;
+   font-size: 1.2rem;
+   font-weight: 400;
+  }
+
+  p {
+   font-size: .8rem;
+   font-weight: 300;
+   width: 100%;
+  }
+ }
+
+ #thumbnail {
+  width: 3rem;
+  height: 3rem;
+ }
+
+}
+
+
+// Bakery stylling 
+
+#bakery-shop {
+
+ #bakery-title {
+  align-items: center;
+
+  h1 {
+   color: $contrast;
+   font-size: 1.2rem;
+   font-weight: 400;
+  }
+
+  p {
+   font-size: .8rem;
+   font-weight: 300;
+   width: 100%;
+  }
+  }
+
+  #thumbnail {
+   width: 3rem;
+   height: 3rem;
+  }
+
+}
+
+// flip stylling
+
+#flip {
+
+ #flip-title {
+  align-items: center;
+
+  h1 {
+   color: $contrast;
+   font-size: 1.2rem;
+   font-weight: 400;
+  }
+
+  p {
+   font-size: .8rem;
+   font-weight: 300;
+   width: 100%;
+  }
+  }
+
+  #thumbnail {
+   width: 3rem;
+   height: 3rem;
+  }
+}
+
+}
+
+
+@include media(340px) {
+
+ @keyframes name-intro {
+  to {
+   height: 30%;
+  }
+ }
+
+ @keyframes title-span {
+  to {
+   transform: scale(.55) rotate(0deg);
+  }
+ }
+
+ @keyframes scale {
+  to {
+   font-size: .7rem;
+  }
+ }
+
+ @keyframes frontend {
+  to {
+   top: 0;
+   left: 38%;
+  }
+ }
+
+ @keyframes developer {
+  to {
+   top: 0;
+   left: 48%;
+  }
+ }
+
+ @keyframes designer {
+  to {
+   top: 15%;
+   left: 41%;
+  }
+ }
+
+ @keyframes title-p-sec {
+  to {
+   transform: translateX(-13.7rem) translateY(-2.4rem);
+   font-size: 0.5rem;
+  }
+ }
+
+ // home  layout stylling
+ #portfolio {
+
+  #name-info{
+   #title {
+
+   h1 {
+    #frontend {
+     transform: translateX(-1rem);
+     font-size: .8rem;
+    }
+
+    #developer {
+     transform: translateX(-0.5rem);
+     font-size: .8rem;
+    }
+
+    #designer {
+     font-size: .8rem;
+    }
+
+    #logo {
+     left: -22%;
+    }
+
+   }
+
+   p {
+    font-size: .5rem;
+    margin-top: -1.5rem;
+   }
+  }
+  }
+
+
+  nav {
+   flex-direction: column;
+   top: 18%;
+   left: 3%;
+   z-index: 1;
+
+   button {
+    font-size: .5rem;
+   }
+  }
+
+  #action {
+   #icons {
+    i {
+     font-size: .8rem;
+    }
+   }
+
+  }
+
+
+  #general {
+   height: 70%;
+   top: 30%;
+  }
+
+ }
+
+// About stylling .
+
+#about {
+
+ h1{
+  font-size: 1.5rem;
+ }
+
+ article p{
+  font-size: 1rem;
+ }
+
+
+}
+
+
+ // projects stylling
+
+ #project {
+
+  .project-item {
+   width: 80%;
+   height: 140%;
+
+   button {
+    font-size: 1.3rem;
+    left: 37%;
+    bottom: 5%;
+    opacity: 1;
+   }
+
+  }
+
+ }
+
+ // spree shop stylling
+
+ #spree-shop {
+
+  #shop-title {
+   
+
+   #thumbnail {
+    width: 4.5rem;
+    height: 3rem;
+   }
+
+   h1 {
+    font-size: 1.3rem;
+    font-weight: 400;
+   }
+
+   p {
+    font-size: .7rem;
+   }
+  }
+
+  #desc {
+   i{
+    font-size: .8rem;
+   }
+  }
+
+
+ }
+
+ // medicare stylling 
+
+ #medicare {
+
+
+  #medicare-title {
+
+   h1 {
+    font-size: 1.2rem;
+   }
+
+   p {
+    font-size: .7rem;
+   }
+  }
+
+  #thumbnail {
+   width: 3.5rem;
+   height: 3.5rem;
+  }
+
+ }
+
+
+ // Bakery stylling 
+
+ #bakery-shop {
+
+  #bakery-title {
+   h1 {
+    font-size: 1.2rem;
+   }
+
+   p {
+    font-size: .7rem;
+   }
+   }
+
+   #thumbnail {
+    width: 3.5rem;
+    height: 3.5rem;
+   }
+
+ }
+
+ // flip stylling
+
+ #flip {
+
+  #flip-title {
+   h1 {
+    font-size: 1.2rem;
+   }
+
+   p {
+    font-size: .7rem;
+   }
+   }
+
+   #thumbnail {
+    width: 3.5rem;
+    height: 3.5rem;
+   }
+
+ }
+
+ // cv stylling
+
+ #cv {
+
+
+  #cv-wrapper {
+   width: 100%;
+   height: 100%;
+   overflow-x: hidden;
+
+   article {
+    padding-left: 1rem;
+
+    #name-title{
+     h1{
+      font-size: 1.5rem;
+     }
+     p{
+      font-size: .85rem;
+      line-height: 1.5rem;
+     }
+    }
+
+    #profile {
+     p {
+      width: 96%;
+      font-size: .85rem;
+     }
+    }
+
+    #skill-set {
+
+     #tech-skill {
+      flex-wrap: wrap;
+     }
+    }
+
+    #cv-projects {
+     ul {
+
+      li {
+       font-size: .85rem;
+       width: 100%;
+      }
+     }
+    }
+
+    #work-experience{
+     p{
+      font-size: .85rem;
+      line-height: 1.5rem;
+     }
+    }
+
+    #education{
+     p {
+      font-size: .85rem;
+      line-height: 1.5rem;
+     }
+    }
+
+
+
+
+   }
+
+   &::-webkit-scrollbar {
+    width: .1rem;
+   }
+
+   &::-webkit-scrollbar-track {
+    border-radius: .1rem;
+   }
+
+   &::-webkit-scrollbar-thumb {
+    border-radius: .1rem;
+   }
+
+
+  }
+
+
+ }
+
+}
+
+
+@include media(300px){
+
+@keyframes title-span {
+ to {
+  transform: scale(.45) rotate(0deg);
+ }
+}
+// home  layout stylling
+#portfolio {
+
+ #name-info {
+  #title {
+   h1 {
+
+    #frontend {
+     transform: translateX(-1rem);
+     font-size: .75rem;
+    }
+
+    #developer {
+     transform: translateX(-0.5rem);
+     font-size: .75rem;
+    }
+
+    #designer {
+     font-size: .75rem;
+    }
+
+    #logo {
+     left: -25%;
+    }
+
+   }
+
+   p {
+    font-size: .5rem;
+    margin-top: -1.5rem;
+   }
+  }
+ }
+}
+
+
+
+
+
+}
